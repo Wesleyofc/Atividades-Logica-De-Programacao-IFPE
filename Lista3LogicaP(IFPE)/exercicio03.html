@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exeercicio03</title>
+</head>
+<body>
+    <script>
+/*Elabore um algoritmo a ler 4 notas de um aluno (de 1 a 10). Após calcular a média das notas,
+apresentar a mensagem “Aprovada” se o aluno tiver obtido média maior ou igual a 6, caso contrário,
+apresentar “Reprovado”*/
+
+//ENTRADA DE DADOS
+
+var nota1=parseFloat(prompt("NOTA 1:"))
+var nota2=parseFloat(prompt("NOTA 2:"))
+var nota3=parseFloat(prompt("NOTA 3:"))
+var nota4=parseFloat(prompt("NOTA 4:"))
+
+//CALCULO DE DADOS
+    
+var media=(nota1+nota2+nota3+nota4)/4
+
+//SAIDA DE DADOS
+
+if(media>=6)
+{
+document.write("VOCÊ FOI APROVADO E SUA NOTA FINAL FOI:"+media)
+}
+
+else
+{
+    document.write("VOCÊ FOI REPROVADO E SUA NOTA FINAL FOI:"+media)
+}
+    </script>
+</body>
+</html>

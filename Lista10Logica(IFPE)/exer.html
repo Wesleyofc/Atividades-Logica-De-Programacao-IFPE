@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exer</title>
+</head>
+
+<body>
+    <script>
+        /*Exercício:
+
+        1- Solicite que o usuário informe seu nome.
+        2- Exiba uma mensagem que boas vinda com o seguinte texto:
+            alert("Bem vindo, <nome>! \n Preciso que informe 2 números para começarmos.")
+        3- Solicite que o usuário informe dois números, o segundo maior que 320.
+        4- Exiba a seguinte mensagem (menu):
+            "Escolha uma opção: (considere o intervalo dos números)"
+            + "\n(1) Quantos números são divisíveis por 5?"
+            + "\n(2) Quais números maiores que 20 são divisíveis por 11?"
+            + "\n(3) Quais números entre 10 e 320 são divisíveis por 2, 4 e 5?"
+            + "\n(4) Quantas vogais há no nome informado?"
+            + "\n(5) Exiba o nome informado de trás para frente."
+            + "\n(9) Sair."          
+        5- Regras:
+        - Cada opção do menu deverá ter, pelo menos, uma função associada.
+        - Pelo menos uma opção deverá ser resolvida utilizando uma função recursiva
+        - Pelo menos uma opção deverá ser resolvida utilizando While
+        - Pelo menos uma opção deverá ser resolvida utilizando For
+        - Ao clicar em sair, deverá ser perguntado: "Tem certeza que quer sair [s/n]"
+        - Obrigue o usuário a informar "s" ou "n" para sair. Para isso crie uma função e dentro dela faça um loop onde, 
+        caso o usuário digite algo diferente do esperado, a mensagem deve ser solicitada novamente.*/
+
+        //FUNÇÕES
+        function numDivi5(vetor) {
+            var num = [];
+            for (var i = 0; i < vetor.length; i++) {
+                if (vetor[i] % 5 == 0) {
+                    num.push(vetor[i]);
+                }
+            }
+            return num
+        }
+
+        function Divisiveispor11(n1, n2) {
+            var numdiv11 = [];
+            for (var i = n1; i <= n2; i++) {
+                if (i > 20 && i % 11 === 0) {
+                    numdiv11.push(i);
+                }
+            }
+            return numdiv11
+        }
+
+        function Divi10e320DivisíPor2e4e5() {
+            var num = []
+            for (var i = 10; i <= 320; i++) {
+                if (i % 2 === 0 && i % 4 === 0 && i % 5 === 0) {
+                    num.push(i)
+                }
+            }
+            return num
+        }
+
+        function contarVogais(nome) {
+            var vogais = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+            var contador = 0
+            for (var i = 0; i < nome.length; i++) {
+                if (vogais.includes(nome[i])) {
+                    contador++
+                }
+            }
+            return contador
+        }
+
+        function inverterNome(nome) {
+            var nomeInvertido = ''
+            for (var i = nome.length - 1; i >= 0; i--) {
+                nomeInvertido += nome[i]
+            }
+            return nomeInvertido
+        }
+
+        function sair(sair){
+            var sair 
+            while(true){
+                var opc = prompt("Tem certeza que quer sair [s/n]")
+                if(opc == "s" || opc == "S"){
+                    sair = 1
+                    break
+                }
+                else if(opc == "n" || opc == "N"){
+                    sair = 0
+                    break
+                }
+                else{
+                    alert("Digite um opção válida!")
+                }
+            }
+            return sair
+        }
+
+        //MENSAGEM DE BOAS VINDAS
+        var nome = prompt("INFORME SEU NOME:")
+        var quantidadeVogais = contarVogais(nome)
+        var nomeInvertido = inverterNome(nome)
+        alert(`Bem vindo, ${nome}! \n Preciso que informe 2 números para começarmos.`)
+
+        //NÚMEROS DOS USÚARIO
+        var n1 = Number(prompt("INFORME UM NÚMERO:"))
+        for (var n2 = Number(prompt("INFORME OUTRO NÚMERO:\n(ESTE NÚMERO PRECISA SER MAIOR QUE 320)")); n2 < 320;) {
+            n2 = Number(prompt("INFORME OUTRO NÚMERO:\n(ESTE NÚMERO PRECISA SER MAIOR QUE 320)"))
+        }
+        var num = [n1, n2]
+
+        //MENU
+        while (true) {
+            var opc = Number(prompt(nome + " escoha uma opção:\n(1) Quantos números são divisíveis por 5?\n(2) Quais números maiores que 20 são divisíveis por 11?\n(3) Quais números entre 10 e 320 são divisíveis por 2, 4 e 5\n(4) Quantas vogais há no nome informado?\n(5) Exiba o nome informado de trás para frente.\n(9) Sair."))
+            if (opc == 1) {
+                alert(`Os números divisíveis por 5 são:  ${numDivi5(num)}`)
+            }
+            else if (opc == 2) {
+                alert(`Os números maiores que 20 divisiveis por 11 são: ${Divisiveispor11(n1, n2)}`)
+            }
+            else if (opc == 3) {
+                alert(`Os números entre 10 e 320 divisíveis por 2, 4 e 5 são: ${Divi10e320DivisíPor2e4e5()}`)
+            }
+            else if (opc == 4) {
+                alert(`A quantidade de vogais no nome informado é: ${quantidadeVogais}`)
+            }
+            else if (opc == 5) {
+                alert(`O nome informado de trás para frente é: ${nomeInvertido}`)
+            }
+            else if (opc == 9) {
+                var sair = sair()
+                if(sair == 1){
+                    alert("Saindo...")
+                    break
+                }
+                
+            }
+            else{
+                alert("Por favor digite uma opção válida!")
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

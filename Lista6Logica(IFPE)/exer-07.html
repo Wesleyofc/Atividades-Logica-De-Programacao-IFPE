@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exer-07</title>
+</head>
+
+<body>
+    <script>
+/*Construa um algoritmo que leia uma quantidade indeterminada de números inteiros
+positivos e identifique qual foi o menor número digitado. O final da série de números
+digitada deve ser indicado pela entrada de -1.
+Dica: Quando declarar a variável que vai armazenar o menor valor, ela precisa ser
+inicializada com um valor alto, tipo 99999.*/
+
+var num = 0
+var menor =99999999
+
+while(num>=0){
+
+num =Number(prompt("Informe um número:"))
+
+if(num<=menor && num>=0){
+  menor = num
+}
+}
+document.write(`O número menor foi: ${menor}`)
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exer-10</title>
+</head>
+
+<body>
+    <script>
+
+/*Faça um algoritmo que leia vários números e informe quantos desses números
+entre 100 e 200 foram digitados. Quando o valor 0 (zero) for lido o algoritmo deverá
+cessar sua execução e informar o resultado.*/
+
+var y = 1
+var qnt = 0
+while(y != 0){
+
+    var num = Number(prompt("Informe um número:"))
+    
+    if(num>100 && num<200){
+        qnt++
+    }
+    y = num
+}
+document.write(`A quantidade de números digitados entre 100 e 200 foram : ${qnt}`)
+    </script>
+</body>
+
+</html>

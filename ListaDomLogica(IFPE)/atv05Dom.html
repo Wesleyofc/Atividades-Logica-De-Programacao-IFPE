@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atv05Dom</title>
+</head>
+<body>
+    <header><h1>Descubra dua massa corporal</h1></header><hr>
+    <h3>Qual é seu peso?</h3>
+    <input type="number" id="peso">
+    <h3>Qual é sua altura?</h3>
+    <input type="number" id="altura">
+    <input type="button" value="=" onclick="calcular()">
+    <label for="" id="resposta"></label>
+    
+    <script>
+
+        function calcular(){
+
+            var peso=Number(document.querySelector("input#peso").value)
+            var altura=Number(document.querySelector("input#altura").value)
+
+            var massaCor=Number(peso/(altura**2))
+
+            document.getElementById("resposta").innerText = massaCor
+        }
+
+       
+    </script>
+
+
+</body>
+</html>

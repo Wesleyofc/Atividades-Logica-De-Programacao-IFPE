@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio04</title>
+</head>
+<body>
+    <script>
+
+/*Faça um algoritmo que leia um número e mostre uma mensagem indicando se este número é par ou
+ímpar e se é positivo ou negativo.*/
+
+//ENTRADA DE DADOS
+
+var num=parseInt(prompt("INFORME UM NÚMERO:"))
+
+//CALCULO DE DADOS
+
+var resto=num%2
+
+if(num>=0)
+{
+    var PosiNega="POSITIVO"
+}
+else
+{
+    PosiNega="NEGATIVO"
+}
+
+if(resto==1)
+{
+    var parImp="IMPAR"
+}
+else
+{
+    parImp="PAR"
+}
+
+//SAIDA DE DADOS
+
+document.write("SEU NÚMERO É "+parImp+" E ELE É "+PosiNega)
+
+    </script>
+</body>
+</html>

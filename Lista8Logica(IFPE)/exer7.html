@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer-7</title>
+</head>
+
+<body>
+    <script>
+
+        /**/
+
+        var vetor = [9, 4, 7, 2, 1]; // Vetor de exemplo
+        var tamanho = vetor.length;
+
+        // Laço para percorrer todo o vetor
+        for (var i = 0; i < tamanho - 1; i++) {
+            // Laço para comparar cada elemento com os seguintes
+            for (var j = 0; j < tamanho - i - 1; j++) {
+
+
+                // Comparação entre elementos adjacentes
+
+
+                if (vetor[j] > vetor[j + 1]) {
+                    // Troca de posição se o elemento atual for maior que o próximo
+
+
+                    var temp = vetor[j];
+                    vetor[j] = vetor[j++]
+                    vetor[j + 1] = temp;
+                    
+                }
+            }
+        }
+
+        alert("Vetor ordenado:", vetor);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atv04Dom</title>
+</head>
+<body>
+    <header><h1>Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit</h1></header><hr>
+
+    <h2>Graus Celsius</h2>
+    <input type="number" id="grausC">
+    <input type="button" value="=" onclick="calcular()">
+    <label for="" id="resposta"></label> <header>Graus Fahrenheit</header>
+
+    <script>
+        function calcular(){
+
+            var grausC=Number(document.querySelector("input#grausC").value)
+            var grausf=(9*grausC+160) / 5
+
+            document.getElementById("resposta").innerText = grausf
+        }
+    </script>
+</body>
+</html>

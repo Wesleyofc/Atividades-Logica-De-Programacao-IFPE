@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO</title>
+</head>
+<body>
+    
+    <script>
+
+/*Partindo da questão 5 feita em sala, cada aluno deverá criar uma situação própria para cada dia da semana. 
+Em sala criamos uma situação para o sábado, onde for dia de aula vamos ao IF, caso contrário vamos à praia. Crie uma situação para cada dia da semana.  Ex: Se estiver chovendo vou de ônibus senão vou de moto-taxi.     se for feriado....  se perder o ônibus...  etc.
+*/
+
+//ENTRADA DE DADOS
+
+var nome=prompt("QUAL SEU NOME?")
+var dia=prompt("QUAL DIA DA SEMANA É HOJE (NÚMERO)?")
+
+
+//SAIDA / CALCULO DE DADOS
+
+if(dia==1)
+{
+     var resp=prompt(`OLÁ ${nome}! HOJE É DOMINGO! ESTÁ CHOVENDO??`)
+     
+     if(resp=="sim")
+     {
+        document.write(`VÁ PRA O CINEMA ${nome}!`)
+     }
+
+     else
+     {
+        document.write(`VÁ PARA A PRAIA ${nome}!`)
+     }
+}
+
+else if(dia==2)
+{
+     var resp=prompt(`OLÁ ${nome}! HOJE É SEGUNDA! TEM AULA HOJE?`)
+     
+     if(resp=="sim")
+     {
+        document.write(`VÁ PRA ESCOLA ${nome}!`)
+     }
+
+     else
+     {
+        document.write(`VÁ PARA A PRAIA ${nome}!`)
+     }
+}
+
+else if(dia==3)
+{
+     var resp=prompt(`OLÁ ${nome}! HOJE É TERÇA-FEIRA! HOJE É FERIADO??`)
+     
+     if(resp=="sim")
+     {
+        document.write(`VÁ DESCANSAR ${nome}!`)
+     }
+
+     else
+     {
+        document.write(`VÁ TRABALHAR VAGABUNDO ${nome}!`)
+     }
+}
+
+else if(dia==4)
+{
+     var resp=prompt(`OLÁ ${nome}! HOJE É QUARTA-FEIRA! VOCÊ PERDEU O ÔNIBUS??`)
+     
+     if(resp=="sim")
+     {
+        document.write(`VOCÊ VAI CHEGAR ATRASADO NO IFPE ${nome}!`)
+     }
+
+     else
+     {
+        document.write(`SE LASCOU! VAI CHAGR A TEMPO NA AULA DE REDES KSKSK ${nome}!`)
+     }
+}
+
+else if(dia==5)
+{
+     var resp=prompt(`OLÁ ${nome}! HOJE É QUINTA-FEIRA! HOJE TEM FESTA, VOCÊ VAI?`)
+     
+     if(resp=="sim")
+     {
+        document.write(`CUIDADO LÁ ${nome}!`)
+     }
+
+     else
+     {
+        document.write(`VÁ DORMIR ${nome}!`)
+     }
+}
+
+else if(dia==6)
+{
+     var resp=prompt(`OLÁ ${nome}! HOJE É SEXTA-FEIRA! SEXTOU??`)
+     
+     if(resp=="sim")
+     {
+        document.write(`APROVEITE ${nome}!`)
+     }
+
+     else
+     {
+        document.write(`É BOM QUE ECONOMIZA DINHEIRO ${nome}!`)
+     }
+}
+
+else if(dia==7)
+{
+     var resp=prompt(`OLÁ ${nome}! HOJE É SABADO! ESTAR CANSADO?`)
+     
+     if(resp=="sim")
+     {
+        document.write(`VÁ PRA CASA ${nome}!`)
+     }
+
+     else
+     {
+        document.write(`SÓ CHEGUE EM CASA AMANHÃ ${nome}!`)
+     }
+}
+
+    </script>
+
+
+
+</body>
+</html>

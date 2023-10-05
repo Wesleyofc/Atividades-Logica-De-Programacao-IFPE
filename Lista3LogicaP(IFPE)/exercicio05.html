@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio05</title>
+</head>
+<body>
+    <script>
+
+/*O DETRAN cobra uma taxa de 1% para carros fabricados antes de 1990 e uma taxa de 1.5% para os
+fabricados de 1990 em diante, a taxa incide sobre o valor de tabela do carro. Faça um algoritmo que
+leia o ano e o preço do carro e a seguir calcule e imprima o imposto a ser pago.*/
+
+//ENTRADA DE DADOS
+
+var valorCar=parseInt(prompt("QUAL O VALOR DO CARRO?"))
+var anoCarro=parseInt(prompt("QUAL O ANO DO CARRO?"))
+
+//CALCULO DE DADOS
+
+if(anoCarro>=1990)
+{
+    var taxa=parseFloat(1,5)
+    var porce=(taxa*valorCar)/100
+    
+    
+}
+else
+{
+    var taxa=parseFloat(1)
+    var porce=parseFloat((taxa*valorCar)/100)
+    
+}
+
+//SAIDA DE DADOS
+
+document.write("O IMPOSTO QUE VOCÊ IRÁ PAGAR É:"+porce)
+    </script>
+</body>
+</html>

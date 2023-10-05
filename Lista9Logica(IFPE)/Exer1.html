@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer-1</title>
+</head>
+
+<body>
+    <script>
+        /*Crie um algoritmo que, após carregar um vetor com valores informados pelo usuário, exiba o seguinte menu:
+        (1) Maior número
+        (2) Menor número
+        (3) Números pares
+        (4) Números impares
+        (5) Números divisíveis por 2 e 3
+
+        (6) Escolher outros números
+        (9) Sair
+
+        Ao selecionar um dos números, o resultado deverá ser exibido através de um alert.
+
+        O algoritmo deverá ter (pelo menos) as seguintes funções:
+        boasVindas()
+        carregarVetor()
+        maiorNumero(vetor)
+        menorNumero(vetor)
+        numerosPares(vetor)
+        numerosImpares(vetor)
+
+        Obs: Será obrigatório o uso do return em pelo menos duas funções.*/
+
+
+
+        //FUNÇÕES
+
+        //função boas vindas
+        function boasVindas() {
+            alert("Bem vindo à nossa calculadora. \n Informe dois números e em seguida escolha uma das opções.")
+        }
+
+        //função carregar vetor
+        function carregarVetor() {
+            var vetor = []
+            for (var num = Number(prompt("informe um número:(0)Sair")); num != 0;) {
+
+                vetor.push(num)
+                num = Number(prompt("informe outro número:(0)Sair"))
+            }
+
+            return vetor
+        }
+
+        //função maior numero
+        function maiorNumero(vetor) {
+
+            var maior = vetor[0]
+
+            for (var i = 1; i < vetor.length; i++) {
+
+                if (vetor[i] > maior) {
+                    maior = vetor[i];
+                    maior = vetor[i];
+
+                }
+            }
+            return maior
+        }
+
+        //função menor numero
+        function menorNumero(vetor) {
+
+            var menor = vetor[0]
+
+            for (var i = 1; i < vetor.length; i++) {
+
+                if (vetor[i] < menor) {
+                    menor = vetor[i];
+                    menor = vetor[i];
+
+                }
+            }
+            return menor
+        }
+        
+        //função numeros pares
+        function numerosPares(vetor) {
+            var vPar = [];
+            for (var i = 0; i < vetor.length; i++) {
+
+                if (vetor[i] % 2 === 0) {
+                    vPar.push(vetor[i]);
+                }
+
+            }
+            return vPar
+        }
+
+        //função numeros impares
+        function numerosImpares(vetor) {
+            var vImpar = [];
+            for (var i = 0; i < vetor.length; i++) {
+
+                if (vetor[i] % 2 != 0) {
+                    vImpar.push(vetor[i]);
+                }
+
+            }
+            return vImpar
+        }
+
+        // função Números divisíveis por 2 e 3
+        function numerosdivisíveispor2e3(vetor){
+            var num = [];
+            for (var i = 0; i < vetor.length; i++) {
+
+                if (vetor[i] % 2 == 0 && vetor[i] % 3 == 0 ) {
+                    num.push(vetor[i]);
+                }
+
+            }
+            return num 
+        }
+
+        //PRINCIPAL
+
+        boasVindas()
+        var numeros = carregarVetor()
+
+        while (true) {
+            var opc = Number(prompt("INFORME UMAS DAS OPÇÕES ABAIXO:\n(1) Maior número\n(2) Menor número\n(3) Números pares\n(4) Números impares\n(5) Números divisíveis por 2 e 3\n(6) Escolher outros números\n(9) Sair"))
+
+            if (opc == 1) {
+                alert(`O maior número digitado foi: ${maiorNumero(numeros)}`)
+            }
+            else if (opc == 2) {
+                alert(`O menor número digitado foi: ${menorNumero(numeros)}`)
+            }
+            else if (opc == 3) {
+                alert(`Os números pares digitados foram: ${numerosPares(numeros)}`)
+            }
+            else if (opc == 4) {
+                alert(`Os números impares digitados foram: ${numerosImpares(numeros)}`)
+            }
+            else if (opc == 5) {
+                alert(`Os números divisíveis por 2 e 3 digitados foram: ${numerosdivisíveispor2e3(numeros)}`)
+            }
+            else if(opc == 6){
+                numeros = []
+                numeros = carregarVetor()
+            }
+            else if(opc == 9){
+                alert("Saindo...")
+                break
+            }
+            else(
+                alert("Digito inválido! Favor digite um digito válido.")
+            )
+        }
+
+
+    </script>
+</body>
+
+</html>

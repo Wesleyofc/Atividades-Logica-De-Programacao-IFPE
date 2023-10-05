@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exer-05</title>
+</head>
+
+<body>
+<script>
+
+/*Construir um algoritmo que calcule a média de vários valores inteiros positivos,
+informados pelo usuário. Quando um valor negativo for lido, o algoritmo deverá
+cessar sua execução e informar o resultado.
+Dica: A média é a (soma) dividido pela quantidade.*/
+
+var num = 0
+var soma = 0
+var qnt = 0
+
+while(num>=0){
+
+    num=Number(prompt("Informe um número:"))
+    if(num>0){
+    qnt++
+    soma = soma + num}
+
+}
+
+var media = soma/qnt
+document.write(`A média dos número digitados foi: ${media}`)
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exer-03</title>
+</head>
+
+<body>
+<script>
+/*3- Construa um algoritmo que leia uma quantidade indeterminada de números e
+informe a quantidade de números digitados. O final da série de números digitada
+deve ser indicado pela entrada do 0 (zero).*/
+
+var x = Number(prompt("Informe um número:"))
+var num=0
+
+while(x!=0){
+    num = num + 1
+    x = Number(prompt("Informe outro número"))
+}
+document.write(`Você digitou ${num} números`)
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio06</title>
+</head>
+<body>
+    <script>
+
+/*Escreva um algoritmo que recebe três inteiros como entrada do teclado e escreva na tela a média, a
+soma, o produto, o menor valor e o maior valor, usando uma linha para cada resultado.*/
+
+//ENTRADA DE DADOS
+
+var num1=parseInt(prompt("NUMERO 1:"))
+var num2=parseInt(prompt("NUMERO 2:"))
+var num3=parseInt(prompt("NUMERO 3:"))
+var numM
+var multi=num1*num2*num3
+//CALCULO DE DADOS
+
+var media=parseFloat((num1+num2+num3)/3)
+var soma=parseInt(num1+num2+num3)
+
+//NUMERO MAIOR
+if(num1>=num2&&num1>=num3)
+{
+     numM=num1
+}
+else if(num2>=num1&&num2>=num3)
+{
+    numM=num2
+}
+
+else
+{
+    numM=num3
+}
+
+//NUMERO MENOR
+var numMenor
+if(num1<=num2&&num1<=num3)
+{
+     numMenor=num1
+}
+else if(num2<=num1&&num2<=num3)
+{
+    numMenor=num2
+}
+
+else
+{
+    numMenor=num3
+}
+
+
+//SAIDA DE DADOS
+
+document.write("A MEDIA DOS NUMEROS É: "+media)
+document.write("\nA SOMA DOS NÚMEROS É: "+soma)
+document.write("A PRODUTO DOS NUMEROS É: "+multi)
+document.write("\nO NUMERO MAIOR É: "+numM)
+document.write("\nO NUMERO MENOR É: "+numMenor)
+    </script>
+</body>
+</html>

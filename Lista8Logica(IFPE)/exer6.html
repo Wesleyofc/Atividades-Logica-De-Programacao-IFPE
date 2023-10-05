@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var vetor = [];
+        var numero;
+        var soma = 0;
+
+        do {
+
+            numero = parseInt(prompt("Digite um número (0 para sair):"));
+
+            if (numero !== 0) {
+                vetor.push(numero);
+                soma += numero; // Adiciona o número à variável soma
+
+            }
+        }
+
+        while (numero !== 0);
+
+        alert("Vetor:", vetor);
+        alert("Soma dos elementos:", soma);
+    </script>
+</body>
+
+</html>

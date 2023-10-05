@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer-1</title>
+</head>
+
+<body>
+    <script>
+
+        /*1- Crie um vetor com os elementos 3, 5 e 2. Em seguida, através de comandos, faça o
+        que se pede, na ordem que está.*/
+
+        var vetor = [3, 5, 2]
+
+        //a. Altere o valor 3, que está no índice 0, por 11;
+        vetor[0] = 12
+
+        //b. Inclua um novo elemento com valor 1 sem utilizar o método push();
+        vetor[vetor.length] = 1;
+
+        //c. Inclua mais um elemento, com valor 4. Desta vez utilize o método push();
+        vetor.push(4)
+
+        //d. Imprima na tela o vetor;
+        alert(vetor)
+
+        // e. Ordenar os elementos do vetor
+        vetor.sort()
+
+        //f. Imprima a quantidade de elementos do vetor. Utilize a função length.
+        alert(vetor.length)
+
+        //g. Imprima novamente o vetor. Desta vez imprima um elemento por linha.
+        for (var i = 0; i < vetor.length; i++) {
+            alert(vetor[i] + "\n")
+        }
+
+        /*h. Por fim, utilizando um laço (while ou for), imprima os elementos no
+        seguinte formato:
+        i. O elemento de índice 0 contém o valor x;
+        ii. O elemento de índice 1 contém o valor y;
+        (Repetir até o final do vetor)*/
+
+        for (var i = 0; i < vetor.length; i++) {
+           alert("O elemento de índice " + i + " contém o valor " + vetor[i]);
+        }
+        
+    </script>
+</body>
+
+</html>

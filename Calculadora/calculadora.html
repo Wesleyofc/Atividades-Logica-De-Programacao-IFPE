@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <script>
+
+        //FUNÇÕES
+
+        function somar(vetor) {
+
+            var resultado = 0
+            for (var i = 0; i < vetor.length; i++) {
+                resultado += vetor[i]
+            }
+            return "O resultado da soma é :" + resultado
+
+        }
+
+        function subtrair(vetor) {
+
+            var resultado = vetor[0]
+            for (var i = 1; i < vetor.length; i++) {
+                resultado -= vetor[i]
+            }
+            return "O resultado da subtração é :" + resultado
+
+        }
+
+        function mult(vetor) {
+
+            var resultado = 1
+            for (var i = 0; i < vetor.length; i++) {
+                resultado *= vetor[i]
+            }
+            return "O resultado da multiplicação é :" + resultado
+
+        }
+
+        function carregarVetor() {
+
+            var vetor = []
+
+            for (var num = Number(prompt("informe um número:(0)Sair")); num != 0;) {
+
+                vetor.push(num)
+                num = Number(prompt("informe outro número:(0)Sair"))
+            }
+
+            return vetor
+        }
+
+        //PRINCIPAL
+
+
+
+
+        while (true) {
+            var opc = Number(prompt("ESCOLHA UMAS DA OPÇÕES ABAIXO:\n(1)somar\n(2)subtrair\n(3)Multiplicar\n(0)Sair"))
+
+            if (opc == 1) {
+                var numeros = carregarVetor()
+                alert(somar(numeros))
+            }
+
+            else if (opc == 2) {
+                var numeros = carregarVetor()
+                alert(subtrair(numeros))
+            }
+
+            else if (opc == 3) {
+                var numeros = carregarVetor()
+                alert(mult(numeros))
+            }
+
+            else if (opc == 0) {
+                alert("Saindo...")
+                break
+            }
+            else (alert("Digito inválido!"))
+        }
+
+
+    </script>
+</body>
+
+</html>

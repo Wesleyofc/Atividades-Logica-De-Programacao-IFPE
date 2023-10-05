@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listaDomexercicio1</title>
+</head>
+<body>
+
+<header><h1>DESCUBRA A AREA DO SEU QUADRADO</h1><hr></header>
+
+<h2>Qual o lado do seu quadrado?</h2>
+
+<input type="number"  id="ld">
+<input type="button" value="=" onclick="calcular()">
+<label for="" id="idResposta"></label>
+    <script>
+        
+        function calcular()
+        {
+        var lado=Number(document.querySelector("input#ld").value)
+        var area = lado * lado
+        
+        
+        //resultado do quadrado
+        document.getElementById("idResposta").innerText = area
+        }
+    </script>
+    
+</body>
+</html>

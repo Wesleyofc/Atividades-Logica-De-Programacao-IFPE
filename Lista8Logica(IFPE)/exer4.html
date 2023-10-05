@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer-4</title>
+</head>
+
+<body>
+    <script>
+
+        /*4- Crie um vetor com os valores 1, 33, 70, 16, 21 e 2. Em seguida crie mais dois vetores,
+        um chamado vPar e outro vImpar. Percorra o primeiro vetor utilizando um FOR e
+        copie os valores pares para o vetor vPar e os impares para o vetor vImpar. Por fim
+        imprima os vetores VPar e vImpar*/
+
+        
+        // Criar vetor com os valores 1, 33, 70, 16, 21 e 2
+        var vetor = [1, 33, 70, 16, 21, 2];
+
+        // Criar vetores vPar e vImpar
+        var vPar = [];
+        var vImpar = [];
+
+        // Percorrer o primeiro vetor e copiar valores pares para vPar e valores ímpares para vImpar
+        for (var i = 0; i < vetor.length; i++) {
+
+
+            if (vetor[i] % 2 === 0) {
+                vPar.push(vetor[i]);
+            }
+
+            else {
+                vImpar.push(vetor[i]);
+            }
+        }
+
+        // Imprimir os vetores vPar e vImpar
+        alert("vPar:", vPar);
+        alert("vImpar:", vImpar);
+    </script>
+</body>
+
+</html>

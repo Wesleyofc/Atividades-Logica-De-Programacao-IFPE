@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer-5</title>
+</head>
+
+<body>
+    <script>
+
+        var vetor = []; // Cria um vetor vazio para armazenar os números digitados
+        var numero;
+
+        do {
+
+            numero = parseInt(prompt("Digite um número (0 para sair):")); // Solicita ao usuário que digite um número e converte para inteiro
+            
+            if (numero !== 0) { // Verifica se o número digitado é diferente de zero
+                vetor.push(numero); // Adiciona o número ao vetor, caso seja diferente de zero
+            }
+        }
+        while (numero !== 0); // O laço continua enquanto o número digitado for diferente de zero
+
+        alert("Vetor:", vetor); // Imprime o vetor no console
+        alert("Quantidade de elementos:", vetor.length); // Imprime a quantidade de elementos do vetor
+        
+    </script>
+</body>
+
+</html>

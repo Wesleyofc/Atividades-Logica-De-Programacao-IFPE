@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exer-14</title>
+</head>
+
+<body>
+    <script>
+
+var numeros = [];
+var input;
+var soma = 0;
+var produto = 1;
+var menor = Infinity;
+var maior = -Infinity;
+
+while (true) {
+  input = prompt("Digite um número (ou 'sair' para encerrar):");
+  
+  if (input === "sair") {
+    break;
+  }
+  
+  if (!isNaN(input)) {
+    var numero = parseFloat(input);
+    numeros.push(numero);
+    soma += numero;
+    produto *= numero;
+    menor = Math.min(menor, numero);
+    maior = Math.max(maior, numero);
+  }
+}
+
+var quantidade = numeros.length;
+var media = soma / quantidade;
+
+document.write("Foram digitados", quantidade, "números e o resultado foi:<br>");
+document.write("Soma:", soma ,"<br>");
+document.write("Média:", media ,"<br>");
+document.write("Produto:", produto ,"<br>");
+document.write("Menor:", menor ,"<br>");
+document.write("Maior:", maior ,"<br>");
+
+
+    </script>
+</body>
+
+</html>
